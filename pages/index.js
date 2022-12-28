@@ -13,9 +13,11 @@ export default function Home() {
       </Head>
       <main className={`q2--gradient`}>
         <section className="flex h-screen relative overflow-hidden justify-center items-center">
-          <AbstractLines className="absolute w-screen opacity-40" />
+          <div className=" w-screen h-[300px] bg--300 flex justify-center relative items-center">
+            <AbstractLines className="absolute md:top-[-25%] lg:top-[-50%] xl:top-[-75%] 2xl:top-[-90%] object-fill hidden md:inline-block w-screen opacity-40" />
 
-          <Q2Logo className="w-[38vw] inline-block" />
+            <Q2Logo className="w-[80vw] md:w-[38vw] inline-block" />
+          </div>
         </section>
       </main>
     </>
