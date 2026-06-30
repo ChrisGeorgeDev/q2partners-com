@@ -353,7 +353,7 @@
     .project-card:nth-child(3) .project-logo {
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -54%);
-      max-width: 39%; margin: 0; z-index: 2;
+      max-width: 35%; margin: 0; z-index: 2;
     }
     .project-card:nth-child(3) .project-logo img {
       max-height: none; opacity: 0.82;
@@ -364,15 +364,12 @@
     .project-card:nth-child(1) .project-logo {
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -56%);
-      width: 100%; margin: 0; z-index: 2;
-      display: flex; flex-direction: column; align-items: center; gap: 16px;
+      max-width: 45%; margin: 0; z-index: 2;
     }
     .project-card:nth-child(1) .project-logo img {
       max-height: none; opacity: 0.92;
       filter: drop-shadow(0 3px 16px rgba(0,0,0,0.55));
     }
-    .project-card:nth-child(1) .kc-emblem   { width: 100%; height: auto; }
-    .project-card:nth-child(1) .kc-wordmark { width: 108%; height: auto; }
     .project-card:nth-child(1) .project-name { display: none; }
     /* Nottinghill: logo centered over hero image */
     .project-card:nth-child(2) .project-logo {
