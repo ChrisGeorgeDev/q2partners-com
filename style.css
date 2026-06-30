@@ -381,7 +381,7 @@
       max-width: 62%; margin: 0; z-index: 2;
     }
     .project-card:nth-child(2) .project-logo img {
-      max-height: none; opacity: 0.82;
+      max-height: none; opacity: 0.92;
       filter: drop-shadow(0 3px 16px rgba(0,0,0,0.55));
     }
     .project-card:nth-child(2) .project-name { display: none; }
