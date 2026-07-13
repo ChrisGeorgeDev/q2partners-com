@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>East97 Member Portal — Q2 Capital &amp; Q2 Property</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════ LOGIN SCREEN ═══════════════════════ -->
+<div id="login-screen" class="login-screen">
+  <div class="login-bg"></div>
+  <div class="login-card">
+    <div class="login-card-head">
+      <div class="login-card-logos">
+        <img src="img/logo-qc.png" alt="Q2 Capital Partners" style="height:28px">
+        <div class="login-card-divider"></div>
+        <img src="img/logo-pm.png" alt="Q2 Property Management" style="height:24px">
+      </div>
+      <div class="login-card-title-wrap">
+        <div class="login-card-title">Investor &amp; Owner Portal</div>
+        <div class="login-card-tagline">Uniting Capital with Purpose.</div>
+      </div>
+    </div>
+    <div class="login-card-body">
+      <p class="login-card-blurb">Sign in once to access your Q2 Capital investment summary and Q2 property management accounts in one place.</p>
+      <label for="user-select" class="login-label">Select Your Account</label>
+      <select id="user-select" class="login-select">
+        <option value="">— Select your name —</option>
+        <optgroup label="── Both Portals ──" id="grp-both"></optgroup>
+        <optgroup label="── Q2 Capital Only ──" id="grp-qc"></optgroup>
+        <optgroup label="── Q2 Property Only ──" id="grp-q2"></optgroup>
+      </select>
+      <label for="pw-input" class="login-label">Password</label>
+      <input type="password" id="pw-input" placeholder="Enter your password" class="login-input">
+      <button id="login-btn" class="login-btn" disabled>Select your account to continue</button>
+      <div class="login-footnote">
+        Q2 Capital Partners · <span class="gold">905.336.8953</span> · info@east97.ca<br>
+        Q2 Property Management · <span class="blue">289-962-4281</span> · info@q2propertymanagement.com<br>
+        <span class="dim">300–1100 Burloak Drive, Burlington ON L7L 6B2</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PORTAL APP ═══════════════════════ -->
+<div id="app" class="app-shell" hidden>
+  <!-- Sidebar -->
+  <div class="side-nav">
+    <div class="side-nav-head">
+      <div class="side-nav-logos">
+        <img src="img/logo-qc.png" alt="Q2 Capital Partners" style="height:28px">
+        <div class="side-nav-divider"></div>
+        <img src="img/logo-pm.png" alt="Q2 Property Management" style="height:24px">
+        <div>
+          <div class="side-nav-brand">East97</div>
+          <div class="side-nav-brand-sub">Member Portal</div>
+        </div>
+      </div>
+      <div class="side-nav-user">
+        <div class="side-nav-user-label">Signed in as</div>
+        <div class="side-nav-user-name" id="user-name"></div>
+        <div class="side-nav-user-badges" id="user-badges"></div>
+      </div>
+    </div>
+    <nav class="side-nav-nav">
+      <div class="side-nav-section-label">My Portals</div>
+      <div id="nav-buttons"></div>
+    </nav>
+    <div class="side-nav-footer" id="side-nav-footer"></div>
+    <div class="side-nav-signout">
+      <button id="signout-btn"><span class="nav-ico"></span> Sign Out</button>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="main-topbar">
+      <div class="main-topbar-rule" id="topbar-rule"></div>
+      <div>
+        <div class="main-topbar-title" id="topbar-title">My Dashboard</div>
+        <div class="main-topbar-sub" id="topbar-sub">EAST97 MEMBER PORTAL · 2025</div>
+      </div>
+      <div class="main-topbar-right">
+        <div class="secure-chip"><span class="secure-dot"></span>Secure</div>
+        <div class="avatar" id="avatar"></div>
+      </div>
+    </div>
+    <div class="main-scroll" id="main-scroll">
+      <div id="view-content"></div>
+      <div class="disclaimer">
+        Projected values, returns, and timelines are estimates based on current project proformas and are not guaranteed. Past performance is not indicative of future results. This portal is provided for informational purposes only and does not constitute an offer to sell, or a solicitation of an offer to buy, any security. Figures are subject to audit confirmation. Q2 Capital Partners · Q2 Property Management · East97 Group, Burlington ON.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox (Kennedy Circle photos) -->
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption">
+      <div id="lightbox-label"></div>
+      <div class="lightbox-meta">Kennedy Circle · April 2026 · Milton ON</div>
+    </div>
+    <button id="lightbox-close">✕</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

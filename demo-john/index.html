@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q2 Capital Partners — Investor Portal (Demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════ LOGIN SCREEN ═══════════════════════ -->
+<div id="login-screen" class="login-screen">
+  <div class="login-bg"></div>
+  <div class="demo-tag">DEMO PORTAL</div>
+  <div class="login-card">
+    <div class="login-card-head">
+      <div class="login-card-logo"><img src="img/logo-qc.png" alt="Q2 Capital Partners" class="q-mark" style="height:48px"></div>
+      <div class="login-card-kicker">INVESTOR PORTAL · DEMO</div>
+      <div class="login-card-investor">
+        <div class="login-card-investor-label">John Doe — Sample Investor</div>
+        <div class="login-card-investor-sub">Doe Capital Holdings Inc.</div>
+      </div>
+    </div>
+    <div class="login-card-body">
+      <p class="login-card-blurb">This is a demonstration portal showing how Q2 Capital Partners investors access their annual investment summary, project progress reports, loan positions, and property management accounts.</p>
+      <label for="pw-input" class="login-label">Demo Password</label>
+      <input type="password" id="pw-input" placeholder="Enter demo password" class="login-input" autocomplete="off">
+      <div id="pw-error" class="login-error" hidden>Incorrect password. Please try again.</div>
+      <button id="login-btn" class="login-btn">View Demo Portal →</button>
+      <div class="login-footnote">
+        Password: <span class="mono gold">Q2Capital</span><br>
+        Contact Q2 Capital · <span class="gold">905.336.8953</span> · info@east97.ca
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PORTAL APP ═══════════════════════ -->
+<div id="app" class="app" hidden>
+  <div class="demo-banner">
+    <span class="demo-banner-icon">🎯</span>
+    <span class="demo-banner-title">Demo Mode</span>
+    <span class="demo-banner-text">— This is a sample portal for John Doe. All investment figures mirror a real investor's structure. Document downloads are disabled.</span>
+  </div>
+
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <div class="side-nav">
+      <div class="side-nav-head">
+        <div class="side-nav-logo"><img src="img/logo-qc.png" alt="Q2 Capital Partners" class="q-mark" style="height:26px"></div>
+        <div class="side-nav-investor">
+          <div class="side-nav-investor-kicker">Demo Investor</div>
+          <div class="side-nav-investor-name">John Doe</div>
+          <div class="side-nav-investor-entity">Doe Capital Holdings Inc.</div>
+          <div class="side-nav-badges">
+            <span class="pill pill-gold">INVESTOR</span>
+            <span class="pill pill-blue">OWNER</span>
+            <span class="pill pill-amber">LENDER</span>
+          </div>
+        </div>
+      </div>
+      <nav class="side-nav-nav" id="nav-tabs">
+        <button class="nav-btn" data-tab="portfolio"><span class="nav-ico"></span>My Portfolio</button>
+        <button class="nav-btn" data-tab="activity"><span class="nav-ico"></span>Capital Activity</button>
+        <button class="nav-btn" data-tab="loans"><span class="nav-ico"></span>Loan Positions</button>
+        <button class="nav-btn" data-tab="projects"><span class="nav-ico"></span>Active Projects</button>
+        <button class="nav-btn" data-tab="kennedy"><span class="nav-ico"></span>Kennedy Circle</button>
+        <button class="nav-btn" data-tab="property"><span class="nav-ico"></span>My Property</button>
+        <button class="nav-btn" data-tab="documents"><span class="nav-ico"></span>Documents</button>
+      </nav>
+      <div class="side-nav-projected">
+        <div class="side-nav-projected-label">Projected Portfolio</div>
+        <div class="side-nav-projected-value">$5.35M</div>
+      </div>
+      <div class="side-nav-signout">
+        <button id="signout-btn"><span class="nav-ico"></span> Sign Out</button>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="main-topbar">
+        <div class="main-topbar-rule"></div>
+        <div>
+          <div class="main-topbar-title" id="topbar-title">My Portfolio</div>
+          <div class="main-topbar-sub">Q2 CAPITAL PARTNERS · DEMO PORTAL · 2025 ANNUAL SUMMARY</div>
+        </div>
+        <div class="main-topbar-right">
+          <div class="demo-chip">DEMO</div>
+          <div class="avatar">JD</div>
+        </div>
+      </div>
+      <div class="main-scroll" id="main-scroll">
+        <!-- Tab panels injected here -->
+        <div id="tab-content"></div>
+        <div class="disclaimer">
+          Projected values, returns, and timelines are estimates based on current project proformas and are not guaranteed. Past performance is not indicative of future results. This portal is provided for informational purposes only and does not constitute an offer to sell, or a solicitation of an offer to buy, any security. Demo figures shown for John Doe are fictional and for illustration only. Q2 Capital Partners · East97 Group · Burlington, Ontario.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox (Kennedy Circle photos) -->
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption">
+      <div id="lightbox-label"></div>
+      <div class="lightbox-meta">Kennedy Circle · April 2026 · Milton ON</div>
+    </div>
+    <button id="lightbox-close">✕</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
